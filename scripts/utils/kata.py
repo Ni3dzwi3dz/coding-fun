@@ -1,7 +1,9 @@
 from pathlib import Path
 import httpx
+import logging
 
-from bs4 import BeautifulSoup
+log = logging.getLogger(__name__)
+
 
 BASE_URL = "https://www.codewars.com/api/v1/code-challenges/"
 
@@ -28,6 +30,7 @@ def get_kata_dict(kata_id: str) -> dict:
     if response.status_code == 200:
         return response.json()
     else:
+        log.error(f"Failed to fetch kata {kata_id} from {url}: {response.status_code} {response.reason_phrase}")
         raise Exception(f"Failed to fetch kata {kata_id}: {response.status_code} {response.reason_phrase}")
 
 def get_kata_path(name: str, rank: int) -> Path:
