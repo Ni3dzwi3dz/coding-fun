@@ -1,0 +1,12 @@
+## Kata link
+[{{ title }}]( link)
+
+## Languages
+{% for lang in languages %}
+    [ ] {{ lang}}  
+{% endfor %}
+
+## Description
+{{ description}}
+
+## Comments
