@@ -9,7 +9,7 @@
 
     [ ] php  
 
-    [ ] scala  
+    [x ] scala  
 
     [ ] python  
 
