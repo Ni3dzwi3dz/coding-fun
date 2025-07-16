@@ -14,7 +14,6 @@ def format_duration(seconds):
         return f'{count} {name}'
     
     def _format_return_message(parts: List) -> str:
-        print(parts)
         if len(parts) == 1:
             return parts[0]
         
