@@ -2,3 +2,5 @@
 .metals/
 .scala-build/
 venv
+.vscode/
+zig-out/
